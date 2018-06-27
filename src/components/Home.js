@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Home extends Component
 {
@@ -10,12 +11,9 @@ class Home extends Component
 	{
 		return(
 			<div>
-				<button 
-					onClick={this.btnClick}
-					className="btn btn-primary"
-				>
-					Find Lunch
-				</button>
+				<Link  className="btn btn-primary main-btn" to={ '/lunch' } >
+					Lunch Time
+				</Link>
 			</div>
 		);
 	}

@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import LunchReducer from './reducerLunch';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  locations: LunchReducer
 });
 
 export default rootReducer;
