@@ -10,15 +10,21 @@ body {
 }
 
 .main-btn{
-  vertical-align: middle;
+  margin-top: 40vh;
 }
 
-.display{
+.result{
 	text-align: center;
 	list-style: none;
 	font-size: 50px;
 }
-
+.block{
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 .loader{
   margin: auto;
   border: 16px solid lightslategray;

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchLocations } from '../actions';
+import { Link } from 'react-router-dom';
 
 import Loading from './loading';
+import Head from './Head';
 
 class Option extends Component
 {
@@ -32,8 +34,14 @@ class Option extends Component
 			return <Loading />
 		}
 		return(
-			<div className="display">
-				{this.showLocation()}
+			<div>
+				<Head />
+				<div className="result">
+					{this.showLocation()}
+					<Link className='btn btn-primary' to='/lunch'>
+						Try Again
+					</Link>
+				</div>
 			</div>
 		);
 	}
