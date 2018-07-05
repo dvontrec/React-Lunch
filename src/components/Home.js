@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 
 class Home extends Component
 {
-	btnClick()
-	{
-		alert("clic");
-	}
 	render()
 	{
 		return(
@@ -18,5 +14,6 @@ class Home extends Component
 		);
 	}
 }
+
 
 export default Home;
