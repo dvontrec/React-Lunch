@@ -19,10 +19,16 @@ class Option extends Component
 		const rNum = Math.floor(Math.random()*this.props.locations.results.length)
 		const results = this.props.locations.results;
 		return(
-				<li key={results[rNum].id}>
-					{results[rNum].name}
-				</li>
+				<div>
+					<li key={results[rNum].id}>{results[rNum].name}</li>
+					<li>{results[rNum].formatted_address}</li>
+				</div>
 		);
+	}
+
+	shareLocation()
+	{
+		alert("hello");
 	}
 
 	render()
@@ -38,6 +44,11 @@ class Option extends Component
 				<Head />
 				<div className="result">
 					{this.showLocation()}
+					<button
+						className='btn btn-secondary'
+						onClick={this.shareLocation}>
+					Share
+					</button>
 					<Link className='btn btn-primary' to='/lunch'>
 						Try Again
 					</Link>
